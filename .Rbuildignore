@@ -1,0 +1,8 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^README\.Rmd$
+^README\.md$
+^\.github$
+^Perplexity\.Rproj$
+^PerplexR\.Rproj$

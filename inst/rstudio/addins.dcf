@@ -1,0 +1,55 @@
+Name: Ask LLM
+Description: Opens an interactive session to chat with a LLM
+Binding: runAddin_askMe
+Interactive: true
+
+Name: Rewrite Text
+Description: Rewrites the selected text
+Binding: runAddin_rewriteText
+Interactive: false
+
+Name: Annotate code
+Description: Annotate the selected code
+Binding: runAddin_annotateCode
+Interactive: false
+
+Name: Finish code
+Description: Finish selected code
+Binding: runAddin_finishCode
+Interactive: false
+
+Name: Create Unit Tests
+Description: Create unit tests for the selected code via testthat
+Binding: runAddin_buildUnitTests
+Interactive: false
+
+Name: Create Name
+Description: Create a name for a function or variable for the selected code
+Binding: runAddin_namingGenie
+Interactive: false
+
+Name: Code Documentation (roxygen2 style)
+Description: Document a function in roxygen2 format
+Binding: runAddin_documentCode
+Interactive: false
+
+Name: Clarify Code
+Description: Clarifies the selected code
+Binding: runAddin_clarifyCode
+Interactive: false
+
+Name: Code debugging
+Description: Find issues in the selected ode
+Binding: runAddin_debugCode
+Interactive: false
+
+Name: Optimize code
+Description: Optimize the selected code
+Binding: runAddin_optimizeCode
+Interactive: false
+
+Name: Translate code
+Description: Translate the selected code from R to Pyhton
+Binding: runAddin_translateCode
+Interactive: false
+
