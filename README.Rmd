@@ -33,12 +33,12 @@ You can install the development version of PerplexR from [GitHub](https://github
 devtools::install_github("GabrielKaiserQFin/PerplexR")
 ```
 
-Or install the current released version of `{PerplexR}` from 
-[CRAN](https://cran.r-project.org/package=PerplexR):
+<!-- Or install the current released version of `{PerplexR}` from  -->
+<!-- [CRAN](https://cran.r-project.org/package=PerplexR): -->
 
-```{r eval = FALSE}
-install.packages("PerplexR")
-```
+<!-- ```{r eval = FALSE} -->
+<!-- install.packages("PerplexR") -->
+<!-- ``` -->
 
 ## Requirements
 
@@ -61,7 +61,7 @@ Sys.setenv(PERPLEXITY_API_KEY = "XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 This is a basic example which shows you how to ask any quastion.
 
-```{r Example AskMe}
+```{r Example AskMe, cache=TRUE}
 AskMe("What do you think about Large language models?")
 ```
 
@@ -70,8 +70,8 @@ AskMe("What do you think about Large language models?")
 
 This is a basic example which shows you how to rewrite text.
 
-```{r Example rewriteText}
-# rewriteText("Dear Recipient, I hope this message finds you well.")
+```{r Example rewriteText, cache=TRUE}
+rewriteText("Dear Recipient, I hope this message finds you well.")
 ```
 
 
@@ -79,8 +79,8 @@ This is a basic example which shows you how to rewrite text.
 
 This is a basic example which shows you how to annotate code.
 
-```{r Example annotateCode}
-# annotateCode("z <- function(x) scale(x)^2")
+```{r Example annotateCode, cache=TRUE}
+annotateCode("z <- function(x) scale(x)^2")
 ```
 
 
@@ -88,8 +88,8 @@ This is a basic example which shows you how to annotate code.
 
 This is a basic example which shows you how to build Unit Tests for your function.
 
-```{r Example buildUnitTests}
-# buildUnitTests("z <- function(x) scale(x)^2")
+```{r Example buildUnitTests, cache=TRUE}
+buildUnitTests("z <- function(x) scale(x)^2")
 ```
 
 
@@ -97,8 +97,8 @@ This is a basic example which shows you how to build Unit Tests for your functio
 
 This is a basic example which shows you how to LLM clarifies your code.
 
-```{r Example clarifyCode}
-# clarifyCode("for (i in 1:10) {\n  print(i ** 2)\n}")
+```{r Example clarifyCode, cache=TRUE}
+clarifyCode("for (i in 1:10) {\n  print(i ** 2)\n}")
 ```
 
 
@@ -106,8 +106,8 @@ This is a basic example which shows you how to LLM clarifies your code.
 
 This is a basic example which shows you how to find bugs in your code.
 
-```{r Example debugCode}
-# debugCode("z <- function(x) scale(x)2")
+```{r Example debugCode, cache=TRUE}
+debugCode("z <- function(x) scale(x)2")
 ```
 
 
@@ -115,8 +115,8 @@ This is a basic example which shows you how to find bugs in your code.
 
 This is a basic example which shows you how to document your code. Formatting style is `Roxygen2` but can be set to NULL.
 
-```{r Example documentCode}
-# documentCode("z <- function(x) scale(x)^2", inLineDocumentation = NULL)
+```{r Example documentCode, cache=TRUE}
+documentCode("z <- function(x) scale(x)^2", inLineDocumentation = NULL)
 ```
 
 
@@ -124,8 +124,8 @@ This is a basic example which shows you how to document your code. Formatting st
 
 This is a basic example which shows you how to finish your code by LLM.
 
-```{r Example finishCode}
-# finishCode("# A function to scale a vector and square the resulting z-score z2 <- function(")
+```{r Example finishCode, cache=TRUE}
+finishCode("# A function to scale a vector and square the resulting z-score z2 <- function(")
 ```
 
 
@@ -133,8 +133,8 @@ This is a basic example which shows you how to finish your code by LLM.
 
 This is a basic example which shows you how to optimize your code.
 
-```{r Example optimizeCode}
-# optimizeCode("z <- function(x) scale(x)^2")
+```{r Example optimizeCode, cache=TRUE}
+optimizeCode("z <- function(x) scale(x)^2")
 ```
 
 
@@ -142,8 +142,8 @@ This is a basic example which shows you how to optimize your code.
 
 This is a basic example which shows you how to translate your code.
 
-```{r Example translateCode}
-# translateCode("z <- function(x) scale(x)^2", from = "R", to = "Python")
+```{r Example translateCode, cache=TRUE}
+translateCode("z <- function(x) scale(x)^2", from = "R", to = "Python")
 ```
 
 
@@ -151,8 +151,8 @@ This is a basic example which shows you how to translate your code.
 
 This is a basic example which shows you how to create a function or variable name.
 
-```{r Example namingGenie}
-# namingGenie("function(x) scale(x)^2"))
+```{r Example namingGenie, cache=TRUE}
+namingGenie("function(x) scale(x)^2")
 ```
 
 
