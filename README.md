@@ -61,9 +61,10 @@ Sys.setenv(PERPLEXITY_API_KEY = "XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ### Addins:
 
-In your RStudio go to Addins and select ASK LLM, which will open an interactive prompt in your Viewer, where you can choose between different LLMs and adjust the temperature and the number of tokens to be used.
+In your RStudio go to **Addins** and select **ASK LLM**, which will open an interactive prompt in your Viewer, where you can choose between different LLMs and adjust the temperature and the number of tokens to be used.
 Just ask anything of you interest and hit the confirm button. The **Done** button let you close the App.
 Similarly, you can mark or copy any text or code and use the other Addins as described below. Addin shortcuts will improve your effiency even further. 
+ 
 
 
 ### AskMe:
