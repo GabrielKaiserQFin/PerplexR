@@ -59,7 +59,14 @@ Sys.setenv(PERPLEXITY_API_KEY = "XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Examples
 
-**AskMe:**
+### Addins:
+
+In your RStudio go to Addins and select ASK LLM, which will open an interactive prompt in your Viewer, where you can choose between different LLMs and adjust the temperature and the number of tokens to be used.
+Just ask anything of you interest and hit the confirm button. The **Done** button let you close the App.
+Similarly, you can mark or copy any text or code and use the other Addins as described below. Addin shortcuts will improve your effiency even further. 
+
+
+### AskMe:
 
 This is a basic example which shows you how to ask any quastion.
 
@@ -72,7 +79,7 @@ AskMe("What do you think about Large language models?")
 > Overall, large language models are a fascinating area of research and could potentially have a significant impact on many aspects of our lives. However, it's important to approach their development and use with caution and to consider the potential consequences
 ```
 
-**rewriteText:**
+### rewriteText:
 
 This is a basic example which shows you how to rewrite text.
 
@@ -83,7 +90,7 @@ rewriteText("Dear Recipient, I hope this message finds you well.")
 > I hope this message reaches you in good health and high spirits
 ```
 
-**annotateCode:**
+### annotateCode:
 
 This is a basic example which shows you how to annotate code.
 
@@ -92,7 +99,7 @@ annotateCode("z <- function(x) scale(x)^2")
 > `z` <- function(x) scale(x)^2 # Define a function z that takes x as input and returns the square of the scaled value of x
 ```
 
-**buildUnitTests:**
+### buildUnitTests:
 
 This is a basic example which shows you how to build Unit Tests for your
 function.
@@ -156,7 +163,7 @@ buildUnitTests("z <- function(x) scale(x)^2")
 >   expect_equal(z(x), matrix(c(1, 4, 9, 16, 25), nrow = 2))
 ```
 
-**clarifyCode:**
+### clarifyCode:
 
 This is a basic example which shows you how to LLM clarifies your code.
 
@@ -173,7 +180,7 @@ clarifyCode("for (i in 1:10) {\n  print(i ** 2)\n}")
 > In summary, this code is printing the squares of the numbers from 1 to 10
 ```
 
-**debugCode:**
+### debugCode:
 
 This is a basic example which shows you how to find bugs in your code.
 
@@ -204,7 +211,7 @@ debugCode("z <- function(x) scale(x)2")
 > Overall, my purpose is to be a helpful and informative AI that can assist users with their needs, and provide a more intuitive and natural interaction than traditional AI systems
 ```
 
-**documentCode:**
+### documentCode:
 
 This is a basic example which shows you how to document your code.
 Formatting style is `Roxygen2` but can be set to NULL.
@@ -234,7 +241,7 @@ documentCode("z <- function(x) scale(x)^2", inLineDocumentation = NULL)
 > This documentation provides a brief description of the function and its inputs and outputs, as well as an example of how to use the function. This is just one way to document a function in R, and there are many other options and conventions that you might use depending on your specific needs and preferences
 ```
 
-**finishCode:**
+### finishCode:
 
 This is a basic example which shows you how to finish your code by LLM.
 
@@ -259,7 +266,7 @@ finishCode("# A function to scale a vector and square the resulting z-score z2 <
 > return(z2^2)
 ```
 
-**optimizeCode:**
+### optimizeCode:
 
 This is a basic example which shows you how to optimize your code.
 
@@ -282,7 +289,7 @@ optimizeCode("z <- function(x) scale(x)^2")
 > By optimizing the code in this way, we can avoid unnecessary computations and make the code more efficient
 ```
 
-**translateCode:**
+### translateCode:
 
 This is a basic example which shows you how to translate your code.
 
@@ -306,7 +313,7 @@ translateCode("z <- function(x) scale(x)^2", from = "R", to = "Python")
 > Note that the `scale` function in Python's NumPy is similar to the `scale` function in R, but it does not scale the data to a common range by default. If you want to scale the data to a common range, you can use the `scale` function with the `standardize` argument set to `True`, like this: `np.scale(x, standardize=True
 ```
 
-**namingGenie:**
+### namingGenie:
 
 This is a basic example which shows you how to create a function or
 variable name.

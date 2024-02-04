@@ -57,7 +57,14 @@ Sys.setenv(PERPLEXITY_API_KEY = "XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Examples
 
-**AskMe:**
+### Addins:
+
+In your RStudio go to Addins and select ASK LLM, which will open an interactive prompt in your Viewer, where you can choose between different LLMs and adjust the temperature and the number of tokens to be used.
+Just ask anything of you interest and hit the confirm button. The **Done** let you close the App.
+Similarly, you can mark or copy any text or code and use the other Addins as described below. Addin shortcuts will improve your effiency even further. 
+
+
+### AskMe:
 
 This is a basic example which shows you how to ask any quastion.
 
@@ -66,7 +73,7 @@ AskMe("What do you think about Large language models?")
 ```
 
 
-**rewriteText:**
+### rewriteText:
 
 This is a basic example which shows you how to rewrite text.
 
@@ -75,7 +82,7 @@ rewriteText("Dear Recipient, I hope this message finds you well.")
 ```
 
 
-**annotateCode:**
+### annotateCode:
 
 This is a basic example which shows you how to annotate code.
 
@@ -84,7 +91,7 @@ annotateCode("z <- function(x) scale(x)^2")
 ```
 
 
-**buildUnitTests:**
+### buildUnitTests:
 
 This is a basic example which shows you how to build Unit Tests for your function.
 
@@ -93,7 +100,7 @@ buildUnitTests("z <- function(x) scale(x)^2")
 ```
 
 
-**clarifyCode:**
+### clarifyCode:
 
 This is a basic example which shows you how to LLM clarifies your code.
 
@@ -102,7 +109,7 @@ clarifyCode("for (i in 1:10) {\n  print(i ** 2)\n}")
 ```
 
 
-**debugCode:**
+### debugCode:
 
 This is a basic example which shows you how to find bugs in your code.
 
@@ -111,7 +118,7 @@ debugCode("z <- function(x) scale(x)2")
 ```
 
 
-**documentCode:**
+### documentCode:
 
 This is a basic example which shows you how to document your code. Formatting style is `Roxygen2` but can be set to NULL.
 
@@ -120,7 +127,7 @@ documentCode("z <- function(x) scale(x)^2", inLineDocumentation = NULL)
 ```
 
 
-**finishCode:**
+### finishCode:
 
 This is a basic example which shows you how to finish your code by LLM.
 
@@ -129,7 +136,7 @@ finishCode("# A function to scale a vector and square the resulting z-score z2 <
 ```
 
 
-**optimizeCode:**
+### optimizeCode:
 
 This is a basic example which shows you how to optimize your code.
 
@@ -138,7 +145,7 @@ optimizeCode("z <- function(x) scale(x)^2")
 ```
 
 
-**translateCode:**
+### translateCode:
 
 This is a basic example which shows you how to translate your code.
 
@@ -147,7 +154,7 @@ translateCode("z <- function(x) scale(x)^2", from = "R", to = "Python")
 ```
 
 
-**namingGenie:**
+### namingGenie:
 
 This is a basic example which shows you how to create a function or variable name.
 
