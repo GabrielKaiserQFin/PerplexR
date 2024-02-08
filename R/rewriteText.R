@@ -51,7 +51,7 @@ rewriteText <- function(text = clipr::read_clip(allow_non_interactive = TRUE),
   # Collapse the modified 'text' into a character vector
   code <- paste(text, collapse = "\n")
   # Create a prompt string by concatenating the input code
-  prompt <- paste0('Can you rewrite the following text such that it is professionally written, grammatically correct, and efficient: "', text, '"')
+  prompt <- paste0('Can you rewrite the following text such that it is professionally written, grammatically correct, and efficient but keep the original language: "', text, '"')
   # Make an API request to Perplexity.AI using API_Request() function, passing the 'prompt' and other necessary arguments
   chatResponse <- API_Request(prompt, PERPLEXITY_API_KEY, modelSelection[1], systemRole, maxTokens, temperature, top_p, top_k, presence_penalty, frequency_penalty, proxy)
   # Parse the response using 'responseParser' and store the result into the 'chatResponse' variable
