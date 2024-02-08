@@ -81,6 +81,13 @@ This is a basic example which shows you how to rewrite text.
 rewriteText("Dear Recipient, I hope this message finds you well.")
 ```
 
+### translateText:
+
+This is a basic example which shows you how to translate text.
+
+```{r Example rewriteText, cache=TRUE}
+translateText("Dear Recipient, I hope this message finds you well.", toLanguage = "Spanish")
+```
 
 ### annotateCode:
 
