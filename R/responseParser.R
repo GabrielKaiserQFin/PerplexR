@@ -12,7 +12,7 @@ responseParser <- function(raw) {
     # Get the first choice from each element's 'choices' list
     choice <- x$choices[[1]]
     # Extract message content from the choice
-    message <- choice$message$content[1]
+    message <- unique(choice$message$content[1])
     # Store the extracted message content in 'chatResponse' as a character string
     chatResponse <- paste(trimws(message), collapse = "")
   }))
