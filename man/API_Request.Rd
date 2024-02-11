@@ -29,6 +29,8 @@ API_Request(
 
 \item{maxTokens}{The maximum integer of completion tokens returned by the API. The total number of tokens requested in max_tokens plus the number of prompt tokens sent in messages must not exceed the context window token limit of model requested. If left unspecified, then the model will generate tokens until either it reaches its stop token or the end of its context window}
 
+\item{temperature}{The amount of randomness in the response, valued between 0 inclusive and 2 exclusive. Higher values are more random, and lower values are more deterministic. You should either set temperature or top_p, but not both.}
+
 \item{top_p}{The nucleus sampling threshold, valued between 0 and 1 inclusive. For each subsequent token, the model considers the results of the tokens with top_p probability mass. You should either alter temperature or top_p, but not both.}
 
 \item{top_k}{The number of tokens to keep for highest top-k filtering, specified as an integer between 0 and 2048 inclusive. If set to 0, top-k filtering is disabled.}
@@ -38,10 +40,6 @@ API_Request(
 \item{frequency_penalty}{A multiplicative penalty greater than 0. Values greater than 1.0 penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim. A value of 1.0 means no penalty. Incompatible with presence_penalty.}
 
 \item{proxy}{Default value is NULL. To execute Perplexity queries via a proxy server, specify the proxy address and port as an argument to the function instance.}
-
-\item{temperatur}{The amount of randomness in the response, valued between 0 inclusive and 2 exclusive. Higher values are more random, and lower values are more deterministic. You should either set temperature or top_p, but not both.}
-
-\item{returnType}{Default is 1, which cats the output, type 2 is unchanged and type 3 returns the output to the clipboard and returns TRUE}
 }
 \description{
 Get LLM Completions Endpoint

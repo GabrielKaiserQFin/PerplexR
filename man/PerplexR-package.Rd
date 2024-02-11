@@ -4,9 +4,9 @@
 \name{PerplexR-package}
 \alias{PerplexR}
 \alias{PerplexR-package}
-\title{PerplexR: A coding assistant using Perplexity's LLMs.}
+\title{PerplexR: A Coding Assistant using Perplexity's LLMs}
 \description{
-'Perplexity's 'LLM' \url{https://perplexity.ai/} coding assistant for 'RStudio' or any other IDE. A set of functions and 'RStudio' addins that aim to help developers.
+A coding assistant using Perplexity's LLMs \url{https://perplexity.ai/} API. A set of functions and 'RStudio' Addins that aim to help R developers.
 }
 \seealso{
 Useful links:
@@ -20,13 +20,13 @@ Useful links:
 \strong{Maintainer}: Gabriel Kaiser \email{quantresearch.gk@gmail.com}
 
 }
-\keyword{LLAMA,}
-\keyword{LLM,}
-\keyword{Mistral,}
-\keyword{Openhermes,}
-\keyword{PPLX,}
+\keyword{LLAMA}
+\keyword{LLM}
+\keyword{Mistral}
+\keyword{Openhermes}
+\keyword{PPLX}
 \keyword{annotate;}
-\keyword{debug,}
-\keyword{document,}
-\keyword{optimize,}
-\keyword{translate,}
+\keyword{debug}
+\keyword{document}
+\keyword{optimize}
+\keyword{translate}

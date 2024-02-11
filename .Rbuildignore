@@ -6,3 +6,4 @@
 ^\.github$
 ^Perplexity\.Rproj$
 ^PerplexR\.Rproj$
+^cran-comments\.md$
