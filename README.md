@@ -1,48 +1,49 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PerplexR
+# perplexR
 
 <!-- badges: start -->
 
 [![CRAN
-status](https://www.r-pkg.org/badges/version/PerplexR)](https://CRAN.R-project.org/package=PerplexR)
+status](https://www.r-pkg.org/badges/version/perplexR)](https://CRAN.R-project.org/package=perplexR)
 [![CRAN
-downloads](https://cranlogs.r-pkg.org/badges/PerplexR)](https://cran.rstudio.com/web/packages/PerplexR/index.html)
+downloads](https://cranlogs.r-pkg.org/badges/perplexR)](https://cran.rstudio.com/web/packages/perplexR/index.html)
+[![R-CMD-check](https://github.com/GabrielKaiserQFin/perplexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GabrielKaiserQFin/perplexR/actions/workflows/R-CMD-check.yaml)
 [![R-CMD-check](https://github.com/GabrielKaiserQFin/PerplexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GabrielKaiserQFin/PerplexR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The objective of `PerplexR` is to offer R users an intuitive interface
+The objective of `perplexR` is to offer R users an intuitive interface
 for leveraging the capabilities of the Perplexity API [Pro
 subscription](https://docs.perplexity.ai/docs/pricing). Utilizing the
 supplied functions, users can enhance their programming productivity by
-incorporating Large Language Models. Furthermore, `PerplexR` includes a
+incorporating Large Language Models. Furthermore, `perplexR` includes a
 RStudio addin, enabling seamless interactive integration of Perplexity
 prompts.
 
 ## Installation
 
-You can install the development version of PerplexR from
-[GitHub](https://github.com/GabrielKaiserQFin/PerplexR) with:
+You can install the development version of perplexR from
+[GitHub](https://github.com/GabrielKaiserQFin/perplexR) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("GabrielKaiserQFin/PerplexR")
+devtools::install_github("GabrielKaiserQFin/perplexR")
 ```
 
-<!-- Or install the current released version of `{PerplexR}` from  -->
-<!-- [CRAN](https://cran.r-project.org/package=PerplexR): -->
+<!-- Or install the current released version of `{perplexR}` from  -->
+<!-- [CRAN](https://cran.r-project.org/package=perplexR): -->
 <!-- ```{r eval = FALSE} -->
-<!-- install.packages("PerplexR") -->
+<!-- install.packages("perplexR") -->
 <!-- ``` -->
 
 ## Requirements
 
 If you have a Pro subscription, you can create an API key by accessing
 [Perplexity API page](https://www.perplexity.ai/settings/api), otherwise
-you can not use `{PerplexR}`.
+you can not use `{perplexR}`.
 
-To use your API key in `{PerplexR}`, you need to configure it in the
+To use your API key in `{perplexR}`, you need to configure it in the
 .Renviron file, by executing `usethis::edit_r_environ()` and adding the
 following line:
 
@@ -50,7 +51,7 @@ following line:
 PERPLEXITY_API_KEY=XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-Ohterwise you can also do this on a session-by-session basis by
+Otherwise you can also do this on a session-by-session basis by
 performing the following step:
 
 ``` r
@@ -67,23 +68,19 @@ different LLMs and adjust the temperature and the number of tokens to be
 used. Just ask anything of you interest and hit the confirm button. The
 **Done** button let you close the App. Similarly, you can mark or copy
 any text or code and use the other Addins as described below. Addin
-shortcuts will improve your effiency even further.
+shortcuts will improve your efficiency even further.
 
 ### AskMe:
 
-This is a basic example which shows you how to ask any quastion.
+This is a basic example which shows you how to ask any question.
 
 ``` r
 AskMe("What do you think about Large language models?")
-Large language models, such as transformer-based models like BERT, RoBERTa, and XLNet, have revolutionized the field of natural language processing in recent years. They have been shown to be highly effective at a wide range of language-related tasks, such as language translation, language generation, and language understanding.
+I think that large language models, such as transformer-based models like BERT and RoBERTa, have been incredibly influential in the field of natural language processing. They have demonstrated the ability to learn and represent complex patterns in language, and have been used to improve a wide range of tasks such as language translation, language generation, and question answering.
 
-One of the key advantages of large language models is their ability to learn from large amounts of data and to capture complex patterns and relationships in language. This has led to significant improvements in the performance of many NLP tasks, such as language translation, question answering, and text classification.
+However, I also think that there are potential risks and challenges associated with the widespread use of large language models. For example, there are concerns about the potential for misuse, such as generating fake news or propaganda, or using the models to impersonate individuals or groups. Additionally, there are concerns about the impact of large language models on employment, as well as the potential for bias in the data used to train the models.
 
-However, large language models are not without their limitations. One of the main challenges with large language models is that they require a large amount of computational resources and memory, which can make them difficult to train and deploy. Additionally, the quality of the training data and the model architecture can have a significant impact on the performance of the model, and it can be difficult to choose the right architecture and data for a particular task.
-
-Overall, I think that large language models are a powerful tool for natural language processing tasks, but they should be used with caution and in the right context. It's important to carefully evaluate the performance of the model and to consider the Sure, I'd be happy to continue.
-
-In addition to the topics we've discussed, there are many other interesting topics related to AI that you might find helpful to know about.
+Overall, I believe that large language models have the potential to be incredibly powerful tools, but it is important to carefully consider their potential risks and challenges, and to work towards developing responsible and ethical use cases for these models.
 ```
 
 ### rewriteText:
@@ -92,9 +89,9 @@ This is a basic example which shows you how to rewrite text.
 
 ``` r
 rewriteText("Dear Recipient, I hope this message finds you well.")
-Dear Recipient,
+Dear [Recipient],
 
-I hope this message reaches you in good health and high spirits.
+I hope this message finds you in good health and high spirits.
 ```
 
 ### translateText:
@@ -103,7 +100,9 @@ This is a basic example which shows you how to translate text.
 
 ``` r
 translateText("Dear Recipient, I hope this message finds you well.", toLanguage = "Spanish")
-Estimado/a destinatario/a, espero que este mensaje te encuentre bien.
+¡Claro que sí! Aquí está la traducción al español:
+
+"Estimado/a destinatario, espero que este mensaje te encuentre bien."
 ```
 
 ### annotateCode:
@@ -112,7 +111,8 @@ This is a basic example which shows you how to annotate code.
 
 ``` r
 annotateCode("z <- function(x) scale(x)^2")
-`# Calculate the square of the scaled input x`
+`# Define a function z that takes a vector x as input`
+`# Apply the scale function to x, then raise the result to the power of 2`
 ```
 
 ### buildUnitTests:
@@ -124,39 +124,85 @@ function.
 buildUnitTests("z <- function(x) scale(x)^2")
 ```
 
-    Here is an example of a testthat file for the given R code:
+    To create a full testthat file with test cases for the R code `z <- function(x) scale(x)^2`, you can follow these steps:
+
+    1. Create a new R file and save it with a name like `test_z.R`.
+    2. Install the `testthat` package if you haven't already by running `install.packages("testthat")`.
+    3. Load the `testthat` package by running `library(testthat)`.
+    4. Create a new R function that takes in a vector `x` and returns the value of `z(x)`. For example:
     ```
-    # test_that.R
+    z <- function(x) {
+      # Your code to compute z(x) goes here
+    }
+    ```
+    5. Use the `testthat` package to write test cases for your `z` function. For example:
+    ```
+    test_that("z(1) is equal to 1", {
+      x <- c(1)
+      expect_equal(z(x), 1)
+    })
 
-    # Load the testthat package
-    library(testthat)
+    test_that("z(1, 2) is equal to 1", {
+      x <- c(1, 2)
+      expect_equal(z(x), 1 I apologize for the confusion earlier. To continue with the topic of the R programming language, I can offer some additional information and resources.
 
-    # Define the subject of the test
-    subject <- "z"
+    R is a powerful programming language that is widely used in data analysis, statistics, and graphics. It is particularly useful for data manipulation, visualization, and modeling. R has a large and active community of users, which has contributed to a rich ecosystem of packages and tools that can be used to extend R's functionality.
 
-    # Define the test cases
-    test_cases <- list(
-      # Test case 1: x = c(1, 2, 3)
-      test_that(
-        z(c(1, 2, 3)) == c(1, 4, 9),
-        label = "z(c(1, 2, 3)) == c(1, 4, 9)"
-      ),
-      # Test case 2: x = c(1, 2, 3, 4)
-      test_that(
-        z(c(1, 2, 3, 4)) == c(1, 4, 9, 16),
-        label = "z(c(1, 2, 3, 4)) == c(1, 4, 9, 16)"
-      ),
-      # Test case 3: x = c(1, 2, # Test case 3: x = c(1, 2, 3, 4)
-      test_that(
-        z(c(1, 2, 3, 4)) == c(1, 4, 9, 16),
-        label = "z(c(1, 2, 3, 4)) == c(1, 4, 9, 16)"
-      ),
-      # Test case 4: x = c(1, 2, 3, 4, 5)
-      test_that(
-        z(c(1, 2, 3, 4, 5)) == c(1, 4, 9, 16, 25),
-        label = "z(c(1, 2, 3, 4, 5)) == c(1, 4, 9, 16, 25)"
-      )
+    Some popular packages in R include:
 
+    * dplyr: for data manipulation and transformation
+    * tidyr: for data tidying and restructuring
+    * ggplot2: for data visualization
+    * Shiny: for building interactive web applications
+    * caret: for machine learning
+
+    R has a wide range of applications, including:
+
+    * Data analysis and visualization
+    * Statistical modeling and hypothesis testing
+    * Data manipulation and cleaning
+    * Machine learning and predictive modeling
+    * Data visualization and graphics
+
+    Some of the advantages of using R include:
+
+    * It is free and open-source
+    * It is highly customizable and extensible
+    * It has a large and active community of users
+    * It has a wide range of built I apologize for the confusion earlier. To continue with the topic of the R programming language, I can offer some additional information and resources.
+
+    R is a powerful programming language that is widely used in data analysis, statistics, and graphics. It is particularly useful for data manipulation, visualization, and modeling. R has a large and active community of users, which has contributed to a rich ecosystem of packages and tools that can be used to extend R's functionality.
+
+    Some popular packages in R include:
+
+    * dplyr: for data manipulation and transformation
+    * tidyr: for data tidying and restructuring
+    * ggplot2: for data visualization
+    * Shiny: for building interactive web applications
+    * caret: for machine learning
+
+    R has a wide range of applications, including:
+
+    * Data analysis and visualization
+    * Statistical modeling and hypothesis testing
+    * Data manipulation and cleaning
+    * Machine learning and predictive modeling
+    * Data visualization and graphics
+
+    Some of the advantages of using R include:
+
+    * It is free and open-source
+    * It is highly customizable and extensible
+    * It has a large and active community of users
+    * It has a wide range of built I'm assuming you want me to continue with the topic of programming in R. Here are some additional resources that you may find helpful:
+
+    1. The R Programming Language by Norman Matloff. This is a comprehensive book that covers the basics of R programming, including data types, functions, and control structures.
+    2. R for Data Science by Hadley Wickham and Garrett Grolemund. This book covers the basics of R programming and data visualization using the tidyverse packages.
+    3. R in a Nutshell by Joseph Adler. This book provides a concise introduction to R programming and includes examples and exercises to help readers solidify their understanding.
+    4. R Studio. This is a popular integrated development environment (IDE) for R programming. It includes a code editor, debugger, and graphical user interface for managing R projects.
+    5. R package repositories. R has a large collection of packages that can be installed and used to extend R's functionality. Some popular packages include dplyr, tidyr, and ggplot2.
+
+    I hope this helps! Let me know if you have any questions or if you need further assistance.
 
 ### clarifyCode:
 
@@ -164,12 +210,11 @@ This is a basic example which shows you how to LLM clarifies your code.
 
 ``` r
 clarifyCode("for (i in 1:10) {\n  print(i ** 2)\n}")
-The code you provided is a simple for loop in R that iterates 10 times and prints out the square of each iteration. Here's a breakdown of the code:
+This is a for loop in R programming language. It is used to iterate over a sequence of numbers, in this case from 1 to 10. The loop starts by initializing a variable "i" to 1, and then it repeats the code inside the loop for each value of "i" in the sequence. The loop ends when "i" reaches 10.
 
-* `for (i in 1:10)`: This line initializes the for loop with the variable `i` taking on the values from 1 to 10.
-* `{ print(i ** 2) }`: This line is the body of the for loop, and it prints out the square of `i` each time the loop iterates. The `**` operator is used for exponentiation, so `i ** 2` is equivalent to `i` squared.
+The code inside the loop is "print(i ** 2)". This command prints the square of the current value of "i" to the console. The "**" operator is used to raise a number to a power in R. Therefore, "i ** 2" is the square of "i".
 
-So, the code will print out the squares of the numbers from 1 to 10: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.
+So, the whole code is a loop that iterates from 1 to 10, and for each value of "i", it prints the square of "i" to the console.
 ```
 
 ### debugCode:
@@ -180,16 +225,16 @@ This is a basic example which shows you how to find bugs in your code.
 debugCode("z <- function(x) scale(x)2")
 ```
 
-    There are several issues with the code you provided:
+    There are several issues with the code:
 
-    1. The `z` function is not defined correctly. It should be defined using the `=` operator, like this: `z <- function(x) { ... }`.
-    2. The `scale` function is not being called correctly. It should be called with parentheses, like this: `scale(x)`.
-    3. The `2` at the end of the code snippet is not necessary. It is not a valid argument for the `scale` function.
+    1. The function is not defined properly. The `z` function should be defined using the `function` keyword, like this: `z <- function(x) {...}`
+    2. The `scale` function should be applied to the `x` argument, not the function itself. It should be called like this: `scale(x)`.
+    3. The function should return a value. In this case, it should return the scaled value of `x`.
 
-    Here is an updated version of the code that is corrected:
+    Here is the corrected code:
     ```
     z <- function(x) {
-      scale(x)
+        return(scale(x))
     }
     ```
 
@@ -200,43 +245,34 @@ Formatting style is `Roxygen2` but can be set to NULL.
 
 ``` r
 documentCode("z <- function(x) scale(x)^2", inLineDocumentation = NULL)
+`z <- function(x) scale(x)^2`
+
+# Description:
+This function takes a numeric vector as input, scales it, and then squares the scaled values. The output is a numeric vector of the same length as the input.
+
+# Parameters:
+
+* `x`: A numeric vector of values to be scaled and squared.
+
+# Details:
+The `scale()` function is used to scale the input vector `x` to have a mean of 0 and a standard deviation of 1. This is done by subtracting the mean and dividing by the standard deviation. The `^2` operator is then applied to the scaled values, resulting in a new vector where each element is the square of the corresponding element in the scaled vector.
+
+# Value:
+A numeric vector of the same length as the input `x`, with each element being the square of the corresponding element in the scaled vector.
+
+# Notes:
+This function is designed to work with numeric vectors only. It will return an error if the input is not a numeric vector.
+
+# Examples:
+
+* `z(c(1, 2, 3, 4, 5))` returns `c(1 * `z(c(2, 4, 6, 8, 10))` returns `c(4 16 36 64 100)`
+* `z(c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))` returns `c(1 4 9 16 25 36 49 64 81 100)`
+
+# See Also:
+
+* `scale()`: Function used to scale the input vector.
+* `^2`: Operator used to square the scaled values.
 ```
-
-    Sure, here's an example of in-line documentation for the function `z <- function(x) scale(x)^2`:
-    ```
-    z <- function(x) {
-      # Scale the input vector x by a factor of 2
-      # and then square the result
-      scaled_x <- scale(x)
-      return(scaled_x^2)
-    }
-    ```
-    In this documentation, we use the `,` character to separate the different parts of the function documentation. The first part is the function name and signature, which is `z <- function(x)`, followed by a brief description of what the function does, which is "Scale the input vector x by a factor of 2 and then square the result". The `return` statement is used to return the result of the function.
-
-    You can also add more details about the function, such as the author, version, and date created, like this:
-    ```
-    z <- function(x) {
-      # Scale the input vector x by a factor of 2
-      # and then square the result
-      #
-      # Author: Your Name
-      # Version: 1.0
-      # Date: June 16, 20 The `scale` function is defined as `scale <- function(x) x/2`, so the function `z` can be written in a more concise way as follows:
-    ```
-    z <- function(x) {
-      scaled_x <- x/2
-      return(scaled_x^2)
-    }
-    ```
-    This function takes a vector `x` as input, divides it by 2 to scale it down, and then squares the result. The `return` statement is used to return the final result of the function.
-
-    You can also use the `*` operator to simplify the function, like this:
-    ```
-    z <- function(x) x^2/2
-    ```
-    This function is equivalent to the previous one, but it is more concise and easier to read.
-
-    In general, it is a good practice to use meaningful variable names and add comments to your code to make it more readable and understandable.
 
 ### finishCode:
 
@@ -244,31 +280,40 @@ This is a basic example which shows you how to finish your code by LLM.
 
 ``` r
 finishCode("# A function to scale a vector and square the resulting z-score z2 <- function(")
-# A function to scale a vector and square the resulting z-score
-z2 <- function(x, center, scale) {
-# center is the mean of the vector
-# scale is the standard deviation of the vector
-
-# Calculate the z-score
-z <- (x - center) / scale
-
-# Calculate the squared z-score
-z2 <- z^2
-
-return(z2)
-}
-
-# Test the function with a sample vector
-x <- c(1, 2, 3, 4, 5)
-center <- mean(x)
-scale <- sd(x)
-z2(x, center, scale)
-
-# The function returns the squared z-score
-# [1] 0.25 1.00 2.00 3.00 4.00
-
-# Note: The function uses the sample mean and standard deviation to calculate the z-score. If the mean and standard deviation of the population are known, they should be used instead.
 ```
+
+    As a helpful assistant with extensive knowledge of programming, I'm happy to assist you with coding in R.
+
+    To complete the R code you provided, we can use the following steps:
+
+    1. Define a function `z2` that takes a vector `x` as input and returns the squared z-score of that vector.
+    2. Within the function, calculate the mean and standard deviation of the input vector `x`.
+    3. Use the mean and standard deviation to calculate the z-score of each element in the vector.
+    4. Square the z-score to obtain the squared z-score.
+    5. Return the squared z-score as the output of the function.
+
+    Here's the completed R code:
+    ```{r}
+    z2 <- function(x) {
+      # Calculate the mean and standard deviation of the input vector
+      mean_x <- mean(x)
+      sd_x <- sd(x)
+      
+      # Calculate the z-score for each element in the vector
+      z_x <- (x - mean_x) / sd_x
+      
+      # Square the z-score to obtain the squared z-score
+      z2_x <- z z_x^2
+      
+      # Return the squared z-score as the output of the function
+      return(z2_x)
+    }
+    ```
+    This function can now be used to calculate the squared z-score for any vector of data. For example, if we have a vector called `my_data` that contains the values 1, 2, 3, 4, 5, we can use the function to calculate the squared z-scores for each value as follows:
+    ```{r}
+    my_squared_z_scores <- z2(my_data)
+    ```
+    This will return the squared z-scores for each value in `my_data`.
 
 ### optimizeCode:
 
@@ -278,8 +323,11 @@ This is a basic example which shows you how to optimize your code.
 optimizeCode("z <- function(x) scale(x)^2")
 ```
 
-    The R code "z <- function(x) scale(x)^2" is a simple function that squares the scaled value of a given vector x. While the code is concise, there are a few ways to optimize it for speed and readability.
-
+    The R code can be optimized by using the inverse operation of `scale()` instead of computing the square of the result. This can be done as follows:
+    ```
+    z <- function(x) 1 / (scale(x) + 1)
+    ```
+    This code will produce the same output as the original code, but it will be more efficient as it avoids the need to compute the square of the result.
 
 ### translateCode:
 
@@ -289,23 +337,14 @@ This is a basic example which shows you how to translate your code.
 translateCode("z <- function(x) scale(x)^2", from = "R", to = "Python")
 ```
 
-    The given R code defines a function `z` that takes a single argument `x` and applies the `scale` function to `x`, then squares the result. Here is the equivalent Python code:
+    The R code "z <- function(x) scale(x)^2" can be translated to Python as:
     ```
     def z(x):
-        return scale(x)**2
+        return (x - np.min(x)) / (np.max(x) - np.min(x)) * 2 - 1
     ```
-    In Python, the `def` keyword is used to define a function, and the `return` keyword is used to return a value from the function. The `scale` function is not a built-in function in Python, but it can be defined using the `scipy.stats` library as follows:
-    ```
-    from scipy.stats import scale
-    ```
-    Alternatively, you can use the `stats` module from the `scipy` package to define the `scale` function:
-    ```
-    import scipy.stats as stats
+    This code defines a function `z` that takes a single argument `x` and returns a scaled value of `x`. The scaling is done using the formula `(x - np.min(x)) / (np.max(x) - np.min(x)) * 2 - 1`, which scales the values of `x` between -1 and 1.
 
-    def scale(x):
-        return stats.norm.ppf(x)
-    ```
-    This defines a function `scale` that takes a single argument `x` and returns the value of the normal distribution with the given mean and variance.
+    In Python, the `np.min` and `np.max` functions are used to find the minimum and maximum values of `x`, and the expression `(x - np.min(x)) / (np.max(x) - np.min(x))` computes the ratio of the difference between `x` and its minimum value to the difference between its maximum value and its minimum value. The resulting value is then multiplied by 2 and subtracted by 1 to achieve the desired range of values.
 
 ### namingGenie:
 
@@ -314,7 +353,9 @@ variable name.
 
 ``` r
 namingGenie("function(x) scale(x)^2")
-The result of the code "function(x) scale(x)^2" is a squared scaled value of x. One possible short and memorable variable name for this result is "sqdScale".
+sca2
+
+This is a good, memorizable and short variable name that follows the camelCase naming convention. It stands for "scale squared" and is easy to understand the purpose of the variable.
 ```
 
 ## Perplexity Model Arguments

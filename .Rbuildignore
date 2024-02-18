@@ -5,5 +5,5 @@
 ^README\.md$
 ^\.github$
 ^Perplexity\.Rproj$
-^PerplexR\.Rproj$
+^perplexR\.Rproj$
 ^cran-comments\.md$

@@ -53,8 +53,9 @@ runAddin_translateCode <- function() execAddin("translateCode")
 #' Opens an interactive chat session with LLM
 #'
 #' @importFrom miniUI gadgetTitleBar miniPage
-#' @importFrom shiny actionButton br icon observeEvent onStop runGadget stopApp textAreaInput
-#' @importFrom shiny updateTextAreaInput wellPanel splitLayout column numericInput sliderInput selectInput
+#' @importFrom shiny actionButton br icon observeEvent onStop runGadget stopApp
+#' @importFrom shiny textAreaInput numericInput sliderInput selectInput
+#' @importFrom shiny updateTextAreaInput wellPanel splitLayout column
 #' @importFrom utils getFromNamespace
 #'
 execAddin_AskMe <- function() {
@@ -63,7 +64,7 @@ execAddin_AskMe <- function() {
   ui <- miniPage(wellPanel(
     # Sets the title.
     gadgetTitleBar("Ask the LLM", NULL),
-    # Sets the CSS style to have a horizontal scrollbar if the content overflows.
+    #Sets the CSS style to have a horizontal scrollbar if the content overflows
     style = "overflow-x: scroll",
     # Add a line break in HTML.
     br(), br(),
@@ -110,12 +111,14 @@ execAddin_AskMe <- function() {
   ))
 
   server <- function(input, output, session) {
-    # This line sets up an observer for the `Ask` button, which will call the function inside the curly braces when the button is clicked.
+    # This line sets up an observer for the `Ask` button.
     observeEvent(input$Ask, {
-      chatResponse <- AskMe(input$question, modelSelection = input$model, maxTokens = input$maxTokens, temperature = input$temperature, returnType = 2)
+      chatResponse <- AskMe(input$question, modelSelection = input$model,
+                            maxTokens = input$maxTokens,
+                            temperature = input$temperature, returnType = 2)
       updateTextAreaInput(session, "response", value = chatResponse)
     })
-    # This line sets up an observer for the `done` button, which will stop the app.
+    # This line sets up an observer for the `done` button.
     observeEvent(input$done, {
       stopApp()
     })

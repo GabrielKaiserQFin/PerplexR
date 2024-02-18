@@ -5,7 +5,7 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
-library(PerplexR)
+library(perplexR)
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "",
@@ -14,43 +14,44 @@ knitr::opts_chunk$set(
 )
 ```
 
-# PerplexR
+# perplexR
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/PerplexR)](https://CRAN.R-project.org/package=PerplexR)
-[![CRAN downloads](https://cranlogs.r-pkg.org/badges/PerplexR)](https://cran.rstudio.com/web/packages/PerplexR/index.html)
+[![CRAN status](https://www.r-pkg.org/badges/version/perplexR)](https://CRAN.R-project.org/package=perplexR)
+[![CRAN downloads](https://cranlogs.r-pkg.org/badges/perplexR)](https://cran.rstudio.com/web/packages/perplexR/index.html)
+[![R-CMD-check](https://github.com/GabrielKaiserQFin/perplexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GabrielKaiserQFin/perplexR/actions/workflows/R-CMD-check.yaml)
 [![R-CMD-check](https://github.com/GabrielKaiserQFin/PerplexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GabrielKaiserQFin/PerplexR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The objective of `PerplexR` is to offer R users an intuitive interface for leveraging the capabilities of the Perplexity API [Pro subscription](https://docs.perplexity.ai/docs/pricing). Utilizing the supplied functions, users can enhance their programming productivity by incorporating Large Language Models. Furthermore, `PerplexR` includes a RStudio addin, enabling seamless interactive integration of Perplexity prompts.
+The objective of `perplexR` is to offer R users an intuitive interface for leveraging the capabilities of the Perplexity API [Pro subscription](https://docs.perplexity.ai/docs/pricing). Utilizing the supplied functions, users can enhance their programming productivity by incorporating Large Language Models. Furthermore, `perplexR` includes a RStudio addin, enabling seamless interactive integration of Perplexity prompts.
 
 ## Installation
 
-You can install the development version of PerplexR from [GitHub](https://github.com/GabrielKaiserQFin/PerplexR) with:
+You can install the development version of perplexR from [GitHub](https://github.com/GabrielKaiserQFin/perplexR) with:
 
 ```{r eval = FALSE}
 # install.packages("devtools")
-devtools::install_github("GabrielKaiserQFin/PerplexR")
+devtools::install_github("GabrielKaiserQFin/perplexR")
 ```
 
-<!-- Or install the current released version of `{PerplexR}` from  -->
-<!-- [CRAN](https://cran.r-project.org/package=PerplexR): -->
+<!-- Or install the current released version of `{perplexR}` from  -->
+<!-- [CRAN](https://cran.r-project.org/package=perplexR): -->
 
 <!-- ```{r eval = FALSE} -->
-<!-- install.packages("PerplexR") -->
+<!-- install.packages("perplexR") -->
 <!-- ``` -->
 
 ## Requirements
 
-If you have a Pro subscription, you can create an API key by accessing [Perplexity API page](https://www.perplexity.ai/settings/api), otherwise you can not use `{PerplexR}`.
+If you have a Pro subscription, you can create an API key by accessing [Perplexity API page](https://www.perplexity.ai/settings/api), otherwise you can not use `{perplexR}`.
 
-To use your API key in `{PerplexR}`, you need to configure it in the .Renviron file, by executing `usethis::edit_r_environ()` and adding the following line:
+To use your API key in `{perplexR}`, you need to configure it in the .Renviron file, by executing `usethis::edit_r_environ()` and adding the following line:
 
 ``` r
 PERPLEXITY_API_KEY=XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-Ohterwise you can also do this on a session-by-session basis by performing the following step:
+Otherwise you can also do this on a session-by-session basis by performing the following step:
 ``` r
 Sys.setenv(PERPLEXITY_API_KEY = "XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 ```
@@ -61,12 +62,12 @@ Sys.setenv(PERPLEXITY_API_KEY = "XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 In your RStudio go to **Addins** and select **ASK LLM**, which will open an interactive prompt in your Viewer, where you can choose between different LLMs and adjust the temperature and the number of tokens to be used.
 Just ask anything of you interest and hit the confirm button. The **Done** button let you close the App.
-Similarly, you can mark or copy any text or code and use the other Addins as described below. Addin shortcuts will improve your effiency even further. 
+Similarly, you can mark or copy any text or code and use the other Addins as described below. Addin shortcuts will improve your efficiency even further. 
 
 
 ### AskMe:
 
-This is a basic example which shows you how to ask any quastion.
+This is a basic example which shows you how to ask any question.
 
 ```{r Example AskMe, cache=TRUE}
 AskMe("What do you think about Large language models?")
