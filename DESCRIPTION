@@ -1,7 +1,7 @@
 Type: Package
 Package: perplexR
 Title: A Coding Assistant using Perplexity's LLMs
-Version: 0.0.9
+Version: 0.0.2
 Authors@R: 
     person("Gabriel", "Kaiser", , "quantresearch.gk@gmail.com", role = c("aut", "cre"))
 Maintainer: Gabriel Kaiser <quantresearch.gk@gmail.com>
