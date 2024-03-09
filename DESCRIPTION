@@ -1,12 +1,12 @@
 Type: Package
 Package: perplexR
-Title: A Coding Assistant using Perplexity's LLMs
+Title: A Coding Assistant using Perplexity's Large Language Models
 Version: 0.0.2
 Authors@R: 
     person("Gabriel", "Kaiser", , "quantresearch.gk@gmail.com", role = c("aut", "cre"))
 Maintainer: Gabriel Kaiser <quantresearch.gk@gmail.com>
-Description: A coding assistant using Perplexity's LLMs
-    <https://perplexity.ai/> API. A set of functions and 'RStudio' Addins
+Description: A coding assistant using Perplexity's Large Language Models
+    <https://perplexity.ai/> API. A set of functions and 'RStudio' add-ins
     that aim to help R developers.
 License: GPL (>= 3)
 URL: https://github.com/GabrielKaiserQFin/perplexR

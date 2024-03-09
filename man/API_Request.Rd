@@ -2,7 +2,7 @@
 % Please edit documentation in R/requestAPI.R
 \name{API_Request}
 \alias{API_Request}
-\title{Get LLM Completions Endpoint}
+\title{Get Large Language Model Completions Endpoint}
 \usage{
 API_Request(
   prompt,
@@ -53,5 +53,5 @@ the same line verbatim. A value of 1.0 means no penalty.}
 \item{proxy}{Default value is NULL.}
 }
 \description{
-Get LLM Completions Endpoint
+Get Large Language Model Completions Endpoint
 }

@@ -1,5 +1,5 @@
-Name: Ask LLM
-Description: Opens an interactive session to chat with a LLM
+Name: Ask Large Language Model
+Description: Opens an interactive session to chat with a Large Language Model
 Binding: runAddin_askMe
 Interactive: true
 

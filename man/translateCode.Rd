@@ -19,8 +19,7 @@ translateCode(
   top_k = 100,
   presence_penalty = 0,
   frequency_penalty = NULL,
-  proxy = NULL,
-  returnType = 1
+  proxy = NULL
 )
 }
 \arguments{
@@ -61,9 +60,6 @@ frequency in the text so far, decreasing the model's likelihood to repeat
 the same line verbatim. A value of 1.0 means no penalty.}
 
 \item{proxy}{Default value is NULL.}
-
-\item{returnType}{Default is 1, which cats the output, type 2 is unchanged
-and type 3 returns the output to the clipboard and returns TRUE.}
 }
 \value{
 A string containing the translated code.
@@ -74,7 +70,8 @@ language to another using Perplexity API. The default behavior is to read the co
 from the clipboard and translate from R to Python.
 }
 \examples{
-# Example usage:
-# translateCode("your R code here", from = "R", to = "Python")
+\dontrun{
+translateCode("your R code here", from = "R", to = "Python")
+}
 
 }

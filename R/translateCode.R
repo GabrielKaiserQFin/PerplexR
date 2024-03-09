@@ -29,17 +29,15 @@
 #' frequency in the text so far, decreasing the model's likelihood to repeat
 #' the same line verbatim. A value of 1.0 means no penalty.
 #' @param proxy Default value is NULL.
-
-#' @param returnType Default is 1, which cats the output, type 2 is unchanged
-#' and type 3 returns the output to the clipboard and returns TRUE.
 #'
 #' @importFrom clipr read_clip
 #'
 #' @return A string containing the translated code.
 #'
 #' @examples
-#' # Example usage:
-#' # translateCode("your R code here", from = "R", to = "Python")
+#' \dontrun{
+#' translateCode("your R code here", from = "R", to = "Python")
+#' }
 #'
 #' @export
 #'
@@ -62,7 +60,7 @@ translateCode <- function(code = clipr::read_clip(allow_non_interactive = TRUE),
                           top_k = 100,
                           presence_penalty = 0,
                           frequency_penalty = NULL,
-                          proxy = NULL, returnType = 1) {
+                          proxy = NULL) {
 
   # Replace all double strings with single string
   code <- gsub('"', "'", code)
@@ -76,7 +74,6 @@ translateCode <- function(code = clipr::read_clip(allow_non_interactive = TRUE),
                               presence_penalty, frequency_penalty, proxy)
   # Parse the response using responseParser() and store the result
   chatResponse <- responseParser(chatResponse)
-
-  # Return the chat response with the specified 'returnType'
-  return(responseReturn(chatResponse, returnType))
+  # Returns output to console and clipboard
+  return(responseReturn(chatResponse))
 }

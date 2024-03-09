@@ -1,4 +1,4 @@
-#' @keywords LLM
+#' @keywords Large Language Model
 #' @keywords LLAMA
 #' @keywords  Mistral
 #' @keywords  Openhermes
@@ -10,6 +10,6 @@
 #' @keywords  annotate;
 "_PACKAGE"
 
-#' 'Perplexity's LLM' <https://www.perplexity.ai> coding assistant for 'RStudio' or any other IDE.
-#' A set of functions and 'RStudio' addins that aim to help developers.
+#' 'Perplexity's Large Language Models' <https://www.perplexity.ai> coding assistant for 'RStudio' or any other IDE.
+#' A set of functions and 'RStudio' add-ins that aim to help developers.
 #'

@@ -2,10 +2,10 @@
 % Please edit documentation in R/addins.R
 \name{execAddin_AskMe}
 \alias{execAddin_AskMe}
-\title{Ask LLM}
+\title{Ask Large Language Model}
 \usage{
 execAddin_AskMe()
 }
 \description{
-Opens an interactive chat session with LLM
+Opens an interactive chat session with Large Language Model
 }

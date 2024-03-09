@@ -2,7 +2,7 @@
 % Please edit documentation in R/addins.R
 \name{execAddin}
 \alias{execAddin}
-\title{Run a LLM RStudio Addin}
+\title{Run a Large Language Model as RStudio add-in}
 \usage{
 execAddin(FUN)
 }
@@ -10,5 +10,5 @@ execAddin(FUN)
 \item{FUN}{The function to be executed.}
 }
 \description{
-Run a LLM RStudio Addin
+Run a Large Language Model as RStudio add-in
 }

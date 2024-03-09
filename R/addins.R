@@ -1,4 +1,4 @@
-#' Run a LLM RStudio Addin
+#' Run a Large Language Model as RStudio add-in
 #'
 #' @param FUN The function to be executed.
 #'
@@ -30,8 +30,8 @@ execAddin <- function(FUN) {
   # Paste the text into a single string, separated by newlines.
   inputText <- paste0(inputText, collapse = "\n")
 
-  # Return the chat response with the specified 'returnType'
-  return(addinFUN(inputText, returnType = 1, maxTokens = 800))
+  # Returns output to console and clipboard
+  return(addinFUN(inputText, maxTokens = 800))
 
 }
 
@@ -48,9 +48,9 @@ runAddin_optimizeCode <- function() execAddin("optimizeCode")
 runAddin_translateCode <- function() execAddin("translateCode")
 
 
-#' Ask LLM
+#' Ask Large Language Model
 #'
-#' Opens an interactive chat session with LLM
+#' Opens an interactive chat session with Large Language Model
 #'
 #' @importFrom miniUI gadgetTitleBar miniPage
 #' @importFrom shiny actionButton br icon observeEvent onStop runGadget stopApp
@@ -63,7 +63,7 @@ execAddin_AskMe <- function() {
 
   ui <- miniPage(wellPanel(
     # Sets the title.
-    gadgetTitleBar("Ask the LLM", NULL),
+    gadgetTitleBar("Ask the Large Language Model", NULL),
     #Sets the CSS style to have a horizontal scrollbar if the content overflows
     style = "overflow-x: scroll",
     # Add a line break in HTML.
@@ -115,7 +115,7 @@ execAddin_AskMe <- function() {
     observeEvent(input$Ask, {
       chatResponse <- AskMe(input$question, modelSelection = input$model,
                             maxTokens = input$maxTokens,
-                            temperature = input$temperature, returnType = 2)
+                            temperature = input$temperature)
       updateTextAreaInput(session, "response", value = chatResponse)
     })
     # This line sets up an observer for the `done` button.

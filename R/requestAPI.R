@@ -1,4 +1,4 @@
-#' Get LLM Completions Endpoint
+#' Get Large Language Model Completions Endpoint
 #'
 #' @param prompt The prompt to generate completions for.
 #' @param PERPLEXITY_API_KEY PERPLEXITY API key.
