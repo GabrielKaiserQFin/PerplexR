@@ -17,5 +17,5 @@ responseParser <- function(raw) {
     chatResponse <- paste(trimws(message), collapse = "")
   }))
   # Return the processed 'chatResponse'
-  return(chatResponse)
+  return(unique(chatResponse))
 }

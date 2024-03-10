@@ -7,9 +7,9 @@
 clarifyCode(
   code = clipr::read_clip(allow_non_interactive = TRUE),
   PERPLEXITY_API_KEY = Sys.getenv("PERPLEXITY_API_KEY"),
-  modelSelection = c("codellama-34b-instruct", "llama-2-70b-chat", "mistral-7b-instruct",
-    "mixtral-8x7b-instruct", "pplx-7b-chat", "pplx-70b-chat", "pplx-7b-online",
-    "pplx-70b-online"),
+  modelSelection = c("mistral-7b-instruct", "mixtral-8x7b-instruct",
+    "codellama-70b-instruct", "sonar-small-chat", "sonar-small-online",
+    "sonar-medium-chat", "sonar-medium-online"),
   systemRole = "You are a helpful assistant with extensive programming skills.",
   maxTokens = 265,
   temperature = 1,

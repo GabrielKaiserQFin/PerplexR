@@ -73,14 +73,13 @@ execAddin_AskMe <- function() {
       column(
         12,
         selectInput("model", "Model:", c(
-            "codellama-34b-instruct",
-            "llama-2-70b-chat",
-            "mistral-7b-instruct",
-            "mixtral-8x7b-instruct",
-            "pplx-7b-chat",
-            "pplx-70b-chat",
-            "pplx-7b-online",
-            "pplx-70b-online"
+                          "mistral-7b-instruct",
+                          "mixtral-8x7b-instruct",
+                          "codellama-70b-instruct",
+                          "sonar-small-chat",
+                          "sonar-small-online",
+                          "sonar-medium-chat",
+                          "sonar-medium-online"
         ))
       ),
       column(

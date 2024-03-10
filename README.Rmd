@@ -20,10 +20,9 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/perplexR)](https://CRAN.R-project.org/package=perplexR)
 [![CRAN downloads](https://cranlogs.r-pkg.org/badges/perplexR)](https://cran.rstudio.com/web/packages/perplexR/index.html)
 [![R-CMD-check](https://github.com/GabrielKaiserQFin/perplexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GabrielKaiserQFin/PerplexR/actions/workflows/R-CMD-check.yaml)
-[![R-CMD-check](https://github.com/GabrielKaiserQFin/PerplexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GabrielKaiserQFin/PerplexR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The objective of `perplexR` is to offer R users an intuitive interface for leveraging the capabilities of the Perplexity API [Pro subscription](https://docs.perplexity.ai/docs/pricing). Utilizing the supplied functions, users can enhance their programming productivity by incorporating Large Language Models. Furthermore, `perplexR` includes a RStudio add-ins, enabling seamless interactive integration of Perplexity prompts.
+The objective of `perplexR` is to offer R users an intuitive interface for leveraging the capabilities of the Perplexity API [Pro subscription](https://docs.perplexity.ai/docs/pricing). Utilizing the supplied functions, users can enhance their programming productivity by incorporating Large Language Models. Furthermore, `perplexR` includes RStudio add-ins, enabling seamless interactive integration of Perplexity prompts.
 
 ## Installation
 
@@ -45,7 +44,7 @@ devtools::install_github("GabrielKaiserQFin/perplexR")
 
 If you have a Pro subscription, you can create an API key by accessing [Perplexity API page](https://www.perplexity.ai/settings/api), otherwise you can not use `{perplexR}`.
 
-To use your API key in `{perplexR}`, you need to configure it in the .Renviron file, by executing `usethis::edit_r_environ()` and add-insg the following line:
+To use your API key in `{perplexR}`, you need to configure it in the .Renviron file, by executing `usethis::edit_r_environ()` and add the following line:
 
 ``` r
 PERPLEXITY_API_KEY=XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -58,11 +57,11 @@ Sys.setenv(PERPLEXITY_API_KEY = "XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Examples
 
-### add-ins:
+### Addin:
 
-In your RStudio go to **add-ins** and select **ASK Large Language Model**, which will open an interactive prompt in your Viewer, where you can choose between different Large Language Models and adjust the temperature and the number of tokens to be used.
-Just ask anything of you interest and hit the confirm button. The **Done** button let you close the App.
-Similarly, you can mark or copy any text or code and use the other add-ins as described below. add-ins shortcuts will improve your efficiency even further. 
+In RStudio go to **Addins** and select **Ask Large Language Model**, which will open an interactive prompt in your Viewer, where you can choose between different Large Language Models and adjust the temperature and the number of tokens to be used.
+Just ask anything of you interest and hit the confirm button. The **Done** button lets you close the app.
+Similarly, you can mark or copy any text or code and use the other add-ins as described below. Add-in shortcuts will improve your efficiency even further. 
 
 
 ### AskMe:
@@ -110,7 +109,7 @@ buildUnitTests("z <- function(x) scale(x)^2")
 
 ### clarifyCode:
 
-This is a basic example which shows you how to Large Language Model clarifies your code.
+This is a basic example to clarify your code.
 
 ```{r Example clarifyCode, cache=TRUE}
 clarifyCode("for (i in 1:10) {\n  print(i ** 2)\n}")
@@ -137,7 +136,7 @@ documentCode("z <- function(x) scale(x)^2", inLineDocumentation = NULL)
 
 ### finishCode:
 
-This is a basic example which shows you how to finish your code by Large Language Model.
+This is a basic example which shows you how to finish your code.
 
 ```{r Example finishCode, cache=TRUE}
 finishCode("# A function to scale a vector and square the resulting z-score z2 <- function(")
@@ -155,7 +154,7 @@ optimizeCode("z <- function(x) scale(x)^2")
 
 ### translateCode:
 
-This is a basic example which shows you how to translate your code.
+This is a basic example which shows you how to translate your code from `R` to `Python`.
 
 ```{r Example translateCode, cache=TRUE}
 translateCode("z <- function(x) scale(x)^2", from = "R", to = "Python")
@@ -176,19 +175,18 @@ namingGenie("function(x) scale(x)^2")
 
 The parameters of perplexity models can be adjusted by passing functional arguments.
 
-*  `text` or `code`: The text or code input required for processing by Large Language Model. If omitted, Large Language Model will utilize the content currently held in the clipboard.
+*  `text` or `code`: The text or code input required for processing by Large Language Model. If omitted, the function will utilize the content currently held in the clipboard.
 
 * `PERPLEXITY_API_KEY`: The PERPLEXITY API key. By default it is set to `Sys.getenv("PERPLEXITY_API_KEY")`.
 
-*  `modelSelection`: model choice. Default is `"codellama-34b-instruct"` but other available [models](https://docs.perplexity.ai/docs/model-cards) are:
-                                                "`llama-2-70b-chat`",
-                                                "`mistral-7b-instruct`",
-                                                "`mixtral-8x7b-instruct`",
-                                                "`pplx-7b-chat`",
-                                                "`pplx-70b-chat`",
-                                                "`pplx-7b-online`",
-                                                "`pplx-70b-online`"
-                           
+*  `modelSelection`: Default is `"mistral-7b-instruct"` but other available [models](https://docs.perplexity.ai/docs/model-cards) are:
+                                                `"mixtral-8x7b-instruct"`,
+                                                `"codellama-70b-instruct"`,
+                                                `"sonar-small-chat"`,
+                                                `"sonar-small-online"`,
+                                                `"sonar-medium-chat"`,
+                                                `"sonar-medium-online"`
+
 
 *  `systemRole`: System role for model. Default is set to "You are a helpful assistant".
 

@@ -1,3 +1,9 @@
+# perplexR 0.0.3
+
+- Response: Model output is pasted to clipboard
+
+---
+
 # perplexR 0.0.2
 
 - New function added: translateText()
