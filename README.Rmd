@@ -12,9 +12,10 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
 ```
 
-# perplexR
+# perplexR <a href="https://github.com/GabrielKaiserQFin/perplexR"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/perplexR)](https://CRAN.R-project.org/package=perplexR)
@@ -22,7 +23,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/GabrielKaiserQFin/perplexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GabrielKaiserQFin/PerplexR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The objective of `perplexR` is to offer R users an intuitive interface for leveraging the capabilities of the Perplexity API [Pro subscription](https://docs.perplexity.ai/docs/pricing). Utilizing the supplied functions, users can enhance their programming productivity by incorporating Large Language Models. Furthermore, `perplexR` includes RStudio add-ins, enabling seamless interactive integration of Perplexity prompts.
+The objective of `perplexR` is to offer R users an intuitive interface for leveraging the capabilities of the Perplexity API [Pro subscription](https://docs.perplexity.ai/guides/getting-started). Utilizing the supplied functions, users can enhance their programming productivity by incorporating Large Language Models. Furthermore, `perplexR` includes RStudio add-ins, enabling seamless interactive integration of Perplexity prompts.
 
 ## Installation
 
@@ -46,12 +47,12 @@ If you have a Pro subscription, you can create an API key by accessing [Perplexi
 
 To use your API key in `{perplexR}`, you need to configure it in the .Renviron file, by executing `usethis::edit_r_environ()` and add the following line:
 
-``` r
+```{r eval = FALSE}
 PERPLEXITY_API_KEY=XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 Otherwise you can also do this on a session-by-session basis by performing the following step:
-``` r
+```{r eval = FALSE}
 Sys.setenv(PERPLEXITY_API_KEY = "XX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 ```
 
@@ -179,13 +180,9 @@ The parameters of perplexity models can be adjusted by passing functional argume
 
 * `PERPLEXITY_API_KEY`: The PERPLEXITY API key. By default it is set to `Sys.getenv("PERPLEXITY_API_KEY")`.
 
-*  `modelSelection`: Default is `"mistral-7b-instruct"` but other available [models](https://docs.perplexity.ai/docs/model-cards) are:
-                                                `"mixtral-8x7b-instruct"`,
-                                                `"codellama-70b-instruct"`,
-                                                `"sonar-small-chat"`,
-                                                `"sonar-small-online"`,
-                                                `"sonar-medium-chat"`,
-                                                `"sonar-medium-online"`
+*  `modelSelection`: Default is `"llama-3.1-sonar-small-128k-online"` but other available [models](https://docs.perplexity.ai/guides/model-cards) are:
+                                `"llama-3.1-sonar-large-128k-online"`,
+                                `"llama-3.1-sonar-huge-128k-online"`
 
 
 *  `systemRole`: System role for model. Default is set to "You are a helpful assistant".

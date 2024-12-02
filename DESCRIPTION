@@ -1,7 +1,7 @@
 Type: Package
 Package: perplexR
 Title: A Coding Assistant using Perplexity's Large Language Models
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: 
     person("Gabriel", "Kaiser", , "quantresearch.gk@gmail.com", role = c("aut", "cre"))
 Maintainer: Gabriel Kaiser <quantresearch.gk@gmail.com>
@@ -22,4 +22,5 @@ Imports:
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
+Logo: man/figures/logo.png

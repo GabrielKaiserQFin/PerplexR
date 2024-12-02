@@ -6,6 +6,8 @@
 \alias{perplexR-package}
 \title{perplexR: A Coding Assistant using Perplexity's Large Language Models}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 A coding assistant using Perplexity's Large Language Models \url{https://www.perplexity.ai/} API. A set of functions and 'RStudio' add-ins that aim to help R developers.
 }
 \seealso{

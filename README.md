@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# perplexR
+# perplexR <a href="https://github.com/GabrielKaiserQFin/perplexR"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 <!-- badges: start -->
 [![CRAN
@@ -13,7 +13,7 @@ downloads](https://cranlogs.r-pkg.org/badges/perplexR)](https://cran.rstudio.com
 
 The objective of `perplexR` is to offer R users an intuitive interface
 for leveraging the capabilities of the Perplexity API [Pro
-subscription](https://docs.perplexity.ai/docs/pricing). Utilizing the
+subscription](https://docs.perplexity.ai/guides/getting-started). Utilizing the
 supplied functions, users can enhance their programming productivity by
 incorporating Large Language Models. Furthermore, `perplexR` includes
 RStudio add-ins, enabling seamless interactive integration of Perplexity
@@ -350,11 +350,10 @@ functional arguments.
 - `PERPLEXITY_API_KEY`: The PERPLEXITY API key. By default it is set to
   `Sys.getenv("PERPLEXITY_API_KEY")`.
 
-- `modelSelection`: Default is `"mistral-7b-instruct"` but other
-  available [models](https://docs.perplexity.ai/docs/model-cards) are:
-  `"mixtral-8x7b-instruct"`, `"codellama-70b-instruct"`,
-  `"sonar-small-chat"`, `"sonar-small-online"`, `"sonar-medium-chat"`,
-  `"sonar-medium-online"`
+- `modelSelection`: Default is `"llama-3.1-sonar-small-128k-online"` but other 
+available [models](https://docs.perplexity.ai/guides/model-cards) are:
+                                `"llama-3.1-sonar-large-128k-online"`,
+                                `"llama-3.1-sonar-huge-128k-online"`
 
 - `systemRole`: System role for model. Default is set to “You are a
   helpful assistant”.

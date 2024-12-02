@@ -1,3 +1,8 @@
+# perplexR 0.0.4
+
+- Response: Updated current models; Added hex sticker;
+
+---
 # perplexR 0.0.3
 
 - Response: Model output is pasted to clipboard

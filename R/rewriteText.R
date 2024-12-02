@@ -36,13 +36,9 @@
 rewriteText <- function(text = clipr::read_clip(allow_non_interactive = TRUE),
                         PERPLEXITY_API_KEY = Sys.getenv("PERPLEXITY_API_KEY"),
                         modelSelection = c(
-                            "mistral-7b-instruct",
-                            "mixtral-8x7b-instruct",
-                            "codellama-70b-instruct",
-                            "sonar-small-chat",
-                            "sonar-small-online",
-                            "sonar-medium-chat",
-                            "sonar-medium-online"
+                            "llama-3.1-sonar-small-128k-online",
+                            "llama-3.1-sonar-large-128k-online",
+                            "llama-3.1-sonar-huge-128k-online"
                         ),
                         systemRole = "You are a helpful assistant.",
                         maxTokens = 265,
